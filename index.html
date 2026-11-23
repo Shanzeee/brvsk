@@ -5,33 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0c1212">
   <meta name="description" content="Kacper Barwiński — Backend Developer working with Kotlin, Java, AWS and Terraform.">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kacper Barwiński — Backend Developer">
+  <meta property="og:description" content="Backend developer working with Kotlin, Java, AWS and Terraform.">
+  <meta property="og:url" content="https://brvsk.pl/">
+  <meta property="og:image" content="https://brvsk.pl/assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/brvsk-icon-a.svg" type="image/svg+xml">
   <title>Kacper Barwiński — Backend Developer | BRVSK</title>
   <style>
     :root{--bg:#0c1212;--surface:#121a19;--ink:#ebf1ed;--soft:#b8c3bd;--muted:#8b9a94;--border:#283633;--accent:#a3e78d}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;position:relative}.scroll-progress{position:fixed;inset:0 auto auto 0;width:0;height:2px;background:var(--accent);z-index:30;box-shadow:0 0 12px rgba(163,231,141,.45)}
+    body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background-image:linear-gradient(rgba(163,231,141,.028) 1px,transparent 1px),linear-gradient(90deg,rgba(163,231,141,.028) 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(to bottom,black,transparent 78%)}
     a{color:inherit;text-decoration:none}a:hover{color:var(--accent)}a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
-    .container{max-width:1040px;margin:0 auto;padding:0 32px}.top{border-bottom:1px solid var(--border)}.top-inner{min-height:80px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:inline-flex;align-items:center;gap:10px;font-weight:800;letter-spacing:-.04em;font-size:21px}.brand img{display:block;width:34px;height:34px}.brand span{color:var(--accent)}
-    nav{display:flex;gap:27px;color:var(--soft);font-size:13px}nav a{white-space:nowrap}.hero{padding:100px 0 80px;border-bottom:1px solid var(--border)}.label{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:12px;letter-spacing:.07em;color:var(--accent);text-transform:uppercase}
-    h1{font-size:clamp(44px,6vw,74px);line-height:1.06;letter-spacing:-.065em;font-weight:730;margin:20px 0 13px}.role{font-size:clamp(20px,2.5vw,27px);color:var(--soft);letter-spacing:-.03em;margin:0}.description{font-size:16px;color:var(--soft);max-width:680px;line-height:1.85;margin:28px 0 26px}.meta{display:flex;flex-wrap:wrap;gap:14px 26px;font-size:13px;color:var(--muted)}.meta b{color:var(--ink);font-weight:500}
+    .container{max-width:1040px;margin:0 auto;padding:0 32px}.top{border-bottom:1px solid var(--border);background:rgba(12,18,18,.82);backdrop-filter:blur(14px);position:sticky;top:0;z-index:10}.top-inner{min-height:80px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:inline-flex;align-items:center;color:var(--ink)}.brand img{display:block;width:126px;height:auto;transition:transform .25s ease,filter .25s ease}.brand:hover img{transform:translateY(-2px);filter:drop-shadow(0 6px 12px rgba(163,231,141,.16))}
+    nav{display:flex;gap:27px;color:var(--soft);font-size:13px}nav a{white-space:nowrap;position:relative}nav a::after{content:"";position:absolute;left:0;right:100%;bottom:-7px;height:1px;background:var(--accent);transition:right .2s ease}nav a:hover::after,nav a.active::after{right:0}nav a.active{color:var(--ink)}.hero{padding:100px 0 80px;border-bottom:1px solid var(--border);position:relative}.label{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:12px;letter-spacing:.07em;color:var(--accent);text-transform:uppercase}.cursor{display:inline-block;width:7px;height:1.05em;background:var(--accent);margin-left:5px;vertical-align:-2px;animation:blink 1s steps(1,end) infinite}@keyframes blink{50%{opacity:0}}
+    h1{font-size:clamp(44px,6vw,74px);line-height:1.06;letter-spacing:-.065em;font-weight:730;margin:20px 0 13px}.role{font-size:clamp(20px,2.5vw,27px);color:var(--soft);letter-spacing:-.03em;margin:0}.description{font-size:16px;color:var(--soft);max-width:680px;line-height:1.85;margin:28px 0 26px}.meta{display:flex;flex-wrap:wrap;gap:14px 26px;font-size:13px;color:var(--muted)}.meta b{color:var(--ink);font-weight:500}.status{display:inline-flex;align-items:center;gap:9px;margin-top:23px;padding:8px 11px;border:1px solid var(--border);border-radius:999px;background:rgba(18,26,25,.6);font:11px ui-monospace,SFMono-Regular,Consolas,monospace;color:var(--soft)}.status-dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(163,231,141,.09)}.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}.button{display:inline-flex;align-items:center;gap:9px;padding:11px 16px;border:1px solid var(--accent);border-radius:8px;color:#0c1212;background:var(--accent);font-size:13px;font-weight:700;transition:transform .2s ease,box-shadow .2s ease}.button:hover{color:#0c1212;transform:translateY(-2px);box-shadow:0 9px 24px rgba(163,231,141,.15)}.button-secondary{color:var(--soft);background:transparent;border-color:var(--border)}.button-secondary:hover{color:var(--ink);border-color:var(--muted);box-shadow:none}
     main section{padding:50px 0;border-bottom:1px solid var(--border)}.section-head{display:grid;grid-template-columns:230px 1fr;gap:28px}.section-head>h2{font-size:13px;font-weight:600;color:var(--accent);letter-spacing:.04em;margin:3px 0 0;text-transform:uppercase}.section-content h3{font-size:20px;font-weight:650;letter-spacing:-.035em;line-height:1.4;margin:0}.detail{font-size:13px;color:var(--muted);margin-top:5px}.section-content p{margin:14px 0 0;color:var(--soft);font-size:14px;line-height:1.8}
     .entry+.entry{margin-top:34px;padding-top:34px;border-top:1px solid #23302e}.work{display:flex;justify-content:space-between;gap:14px}.when{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:12px;color:var(--muted);padding-top:3px;white-space:nowrap}ul{padding:0 0 0 19px;margin:17px 0 0;color:var(--soft);font-size:14px}li{margin:9px 0;padding-left:4px}li::marker{color:var(--accent)}
-    .columns{display:grid;grid-template-columns:1fr 1fr;gap:34px}.tech-group{margin:0 0 24px}.tech-group h3{font-size:13px;color:var(--muted);font-weight:500;margin-bottom:9px;letter-spacing:0}.tech-group p{margin:0;color:var(--ink);font-size:14px;line-height:1.85}.project{padding:0 0 24px;margin-bottom:24px;border-bottom:1px solid #23302e}.project:last-child{border:0;margin-bottom:0;padding-bottom:0}.project h3{font-size:18px}.project a,.contact a{color:var(--accent);font-size:13px}.contact{display:flex;flex-wrap:wrap;gap:12px 27px;margin-top:18px}.contact a{font-size:14px}
-    footer{padding:30px 0 50px;font-size:12px;color:var(--muted)}footer .container{display:flex;justify-content:space-between}@media(max-width:730px){.container{padding:0 22px}.top-inner{min-height:72px}.top nav{gap:14px;font-size:12px}.top nav a:first-child{display:none}.hero{padding:70px 0 65px}.section-head{grid-template-columns:1fr;gap:17px}main section{padding:37px 0}.columns{grid-template-columns:1fr;gap:0}.work{display:block}.when{display:block;padding:3px 0 0}.description{font-size:15px}.meta{gap:10px 20px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+    .columns{display:grid;grid-template-columns:1fr 1fr;gap:34px}.tech-group{margin:0 0 24px}.tech-group h3{font-size:13px;color:var(--muted);font-weight:500;margin-bottom:11px;letter-spacing:0}.tags{display:flex;flex-wrap:wrap;gap:7px}.tag{display:inline-flex;padding:6px 9px;border:1px solid var(--border);border-radius:6px;background:rgba(18,26,25,.72);color:var(--ink);font:12px ui-monospace,SFMono-Regular,Consolas,monospace}.projects-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.project{display:flex;flex-direction:column;min-height:230px;padding:24px;border:1px solid var(--border);border-radius:14px;background:linear-gradient(145deg,rgba(18,26,25,.92),rgba(12,18,18,.72));transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease}.project:hover{transform:translateY(-4px);border-color:#3f5751;box-shadow:0 18px 40px rgba(0,0,0,.18)}.project::before{content:"0" counter(project);counter-increment:project;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;color:var(--muted);font-size:11px;margin-bottom:26px}.projects-grid{counter-reset:project}.project h3{font-size:18px}.project p{flex:1}.project a,.contact a{color:var(--accent);font-size:13px}.contact{display:flex;flex-wrap:wrap;align-items:center;gap:12px 27px;margin-top:18px}.contact a{font-size:14px}.copy-email{appearance:none;border:0;background:none;padding:0;color:var(--accent);font:14px inherit;cursor:pointer}.copy-email:hover{color:var(--ink)}.reveal{opacity:0;transform:translateY(18px);transition:opacity .55s ease,transform .55s ease}.reveal.visible{opacity:1;transform:none}.toast{position:fixed;left:50%;bottom:28px;z-index:40;transform:translate(-50%,16px);padding:10px 14px;border:1px solid var(--border);border-radius:8px;background:#121a19;color:var(--ink);font:12px ui-monospace,SFMono-Regular,Consolas,monospace;opacity:0;pointer-events:none;transition:opacity .2s ease,transform .2s ease}.toast.show{opacity:1;transform:translate(-50%,0)}
+    footer{padding:30px 0 50px;font-size:12px;color:var(--muted)}footer .container{display:flex;justify-content:space-between}@media(max-width:730px){.container{padding:0 22px}.top-inner{min-height:72px}.brand img{width:108px}.top nav{gap:14px;font-size:12px}.top nav a:first-child,.top nav a:nth-child(2){display:none}.hero{padding:70px 0 65px}.section-head{grid-template-columns:1fr;gap:17px}main section{padding:37px 0}.columns,.projects-grid{grid-template-columns:1fr;gap:14px}.work{display:block}.when{display:block;padding:3px 0 0}.description{font-size:15px}.meta{gap:10px 20px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.cursor{animation:none}.brand img,.project,.button,.reveal,.toast{transition:none}.reveal{opacity:1;transform:none}}
   </style>
 </head>
 <body>
+  <div class="scroll-progress" aria-hidden="true"></div>
   <header class="top"><div class="container top-inner">
-    <a class="brand" href="#top" aria-label="BRVSK home"><img src="assets/favicon.svg" alt="" width="34" height="34">BRVSK<span>.</span></a>
+    <a class="brand" href="#top" aria-label="BRVSK home"><img src="assets/brvsk-logo-a.svg" alt="BRVSK" width="126" height="29"></a>
     <nav aria-label="Main navigation"><a href="#experience">Experience</a><a href="#technology">Technology</a><a href="#projects">Projects</a><a href="#contact">Contact</a></nav>
   </div></header>
   <div class="container">
     <div class="hero" id="top">
-      <div class="label">Backend developer / personal website</div>
+      <div class="label">&gt; backend developer / personal website<span class="cursor" aria-hidden="true"></span></div>
       <h1>Kacper Barwiński</h1>
       <p class="role">Backend Developer</p>
       <p class="description">I build and maintain backend services in Kotlin and Java, working across cloud infrastructure, asynchronous integrations and production systems. I enjoy turning complex requirements into reliable, observable software.</p>
       <div class="meta"><span>Based in <b>Kraków, Poland</b></span><span>Focus: <b>Backend / Cloud</b></span><span>Website: <b>brvsk.pl</b></span></div>
+      <div class="status"><span class="status-dot" aria-hidden="true"></span><span>system.status: building reliable backend services</span></div>
+      <div class="hero-actions"><a class="button" href="assets/Kacper-Barwinski-CV.pdf" download>Download CV <span aria-hidden="true">↓</span></a><a class="button button-secondary" href="#projects">View projects</a></div>
     </div>
     <main>
       <section class="section-head" id="experience">
@@ -44,13 +54,13 @@
       <section class="section-head" id="technology">
         <h2>02 / Technology</h2>
         <div class="section-content columns">
-          <div><div class="tech-group"><h3>Backend</h3><p>Kotlin · Java · Quarkus · Spring Boot · REST APIs</p></div><div class="tech-group"><h3>Data</h3><p>PostgreSQL · DynamoDB · Hibernate · SQL · NoSQL</p></div></div>
-          <div><div class="tech-group"><h3>Cloud &amp; DevOps</h3><p>AWS · Terraform · Docker · CI/CD</p></div><div class="tech-group"><h3>Messaging &amp; Observability</h3><p>SQS · SNS · CloudWatch · Datadog</p></div></div>
+          <div><div class="tech-group"><h3>Backend</h3><div class="tags"><span class="tag">Kotlin</span><span class="tag">Java</span><span class="tag">Quarkus</span><span class="tag">Spring Boot</span><span class="tag">REST APIs</span></div></div><div class="tech-group"><h3>Data</h3><div class="tags"><span class="tag">PostgreSQL</span><span class="tag">DynamoDB</span><span class="tag">Hibernate</span><span class="tag">SQL</span><span class="tag">NoSQL</span></div></div></div>
+          <div><div class="tech-group"><h3>Cloud &amp; DevOps</h3><div class="tags"><span class="tag">AWS</span><span class="tag">Terraform</span><span class="tag">Docker</span><span class="tag">CI/CD</span></div></div><div class="tech-group"><h3>Messaging &amp; Observability</h3><div class="tags"><span class="tag">SQS</span><span class="tag">SNS</span><span class="tag">CloudWatch</span><span class="tag">Datadog</span></div></div></div>
         </div>
       </section>
       <section class="section-head" id="projects">
         <h2>03 / Selected projects</h2>
-        <div class="section-content">
+        <div class="section-content projects-grid">
           <article class="project"><h3>ZenithActive</h3><p>A fitness facility management platform with class enrollment, reviews, QR and PDF generation, notifications, loyalty features and AWS S3 integration.</p><a href="https://github.com/Shanzeee/ZenithActive" target="_blank" rel="noreferrer">View on GitHub ↗</a></article>
           <article class="project"><h3>RaspHousemate</h3><p>A smart apartment management system built around Raspberry Pi, including environmental control, security features and message-based notifications.</p><a href="https://github.com/Shanzeee/RaspHousemate" target="_blank" rel="noreferrer">View on GitHub ↗</a></article>
         </div>
@@ -61,10 +71,30 @@
       </section>
       <section class="section-head" id="contact">
         <h2>05 / Contact</h2>
-        <div class="section-content"><h3>Let’s get in touch</h3><p>For professional opportunities, collaboration or a conversation about backend engineering.</p><div class="contact"><a href="mailto:kbarwinski00@gmail.com">kbarwinski00@gmail.com</a><a href="https://github.com/Shanzeee" target="_blank" rel="noreferrer">GitHub</a></div></div>
+        <div class="section-content"><h3>Let’s get in touch</h3><p>For professional opportunities, collaboration or a conversation about backend engineering.</p><div class="contact"><button class="copy-email" type="button" data-email="kbarwinski00@gmail.com">Copy email</button><a href="mailto:kbarwinski00@gmail.com">Open mail</a><a href="https://github.com/Shanzeee" target="_blank" rel="noreferrer">GitHub</a></div></div>
       </section>
     </main>
   </div>
   <footer><div class="container"><span>© 2026 Kacper Barwiński</span><span>brvsk.pl</span></div></footer>
+  <div class="toast" role="status" aria-live="polite"></div>
+  <script>
+    const progress = document.querySelector('.scroll-progress');
+    const toast = document.querySelector('.toast');
+    const showToast = message => { toast.textContent = message; toast.classList.add('show'); clearTimeout(showToast.timer); showToast.timer = setTimeout(() => toast.classList.remove('show'), 1800); };
+    const updateProgress = () => { const max = document.documentElement.scrollHeight - innerHeight; progress.style.width = `${max > 0 ? scrollY / max * 100 : 0}%`; };
+    addEventListener('scroll', updateProgress, {passive:true}); updateProgress();
+
+    const revealObserver = new IntersectionObserver(entries => entries.forEach(entry => { if(entry.isIntersecting){ entry.target.classList.add('visible'); revealObserver.unobserve(entry.target); } }), {threshold:.12});
+    document.querySelectorAll('main section').forEach(section => { section.classList.add('reveal'); revealObserver.observe(section); });
+
+    const navLinks = [...document.querySelectorAll('nav a')];
+    const sectionObserver = new IntersectionObserver(entries => entries.forEach(entry => { if(entry.isIntersecting){ navLinks.forEach(link => link.classList.toggle('active', link.hash === `#${entry.target.id}`)); } }), {rootMargin:'-35% 0px -55%',threshold:0});
+    document.querySelectorAll('main section[id]').forEach(section => sectionObserver.observe(section));
+
+    document.querySelector('.copy-email').addEventListener('click', async event => { try { await navigator.clipboard.writeText(event.currentTarget.dataset.email); showToast('Email copied to clipboard'); } catch { location.href = `mailto:${event.currentTarget.dataset.email}`; } });
+
+    let typed = '';
+    addEventListener('keydown', event => { if(event.key.length !== 1) return; typed = (typed + event.key.toLowerCase()).slice(-5); if(typed === 'brvsk') showToast('> hello, world_'); });
+  </script>
 </body>
 </html>

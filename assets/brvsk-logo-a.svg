@@ -1,0 +1,12 @@
+<svg width="420" height="96" viewBox="0 0 420 96" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
+  <title id="title">BRVSK</title>
+  <g fill="#F2F4F1">
+    <path fill-rule="evenodd" d="M4 8H58L74 24V39L63 50L76 63V76L58 94H4V8ZM22 24V43H52L58 37V30L52 24H22ZM22 59V78H52L59 71V66L52 59H22Z" clip-rule="evenodd"/>
+    <path fill-rule="evenodd" d="M86 8H136L153 25V46L142 57L159 94H140L125 61H104V94H86V8ZM104 24V45H130L136 39V30L130 24H104Z" clip-rule="evenodd"/>
+    <path d="M161 8H180L202 71L224 8H243L212 94H192L161 8Z"/>
+    <path d="M250 8H317V24H268V42H305L321 58V76L303 94H250V78H296L303 71V66L296 59H266L250 43V8Z"/>
+    <path d="M331 8H349V43L369 8H390L365 50L393 94H371L349 58V94H331V8Z"/>
+  </g>
+  <path d="M28 29L36 36L28 43" stroke="#A3E78D" stroke-width="4" stroke-linecap="square"/>
+  <rect x="28" y="68" width="12" height="4" fill="#A3E78D"/>
+</svg>
